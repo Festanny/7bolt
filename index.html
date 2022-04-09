@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7bolt | Авторизация</title>
+    <title>Регистрация | Seven Bolt</title>
     <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png">
-    <link rel="shortcut icon" href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png" type="image/png"/>
-    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png" type="image/png"/>
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png" type="image/png" />
+    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e10ed8_f21003ef328749c2852799e5d807b3f0%7Emv2.png" type="image/png" />
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <header>
         <div class="header container">
@@ -20,14 +22,41 @@
             </div>
             <nav>
                 <a href="https://www.7bolt.com/">Главная</a>
-                <a class="active">Авторизация</a>
-                <a href="#">Регистрация</a>
+                <a class="active">Регистрация</a>
+                <a href="#">Авторизация</a>
             </nav>
         </div>
     </header>
 
     <main>
-
+        <div class="form-block container">
+            <h4>Регистрация</h4>
+            <div class="form">
+                <form action="" method="POST">
+                    <div class="input">
+                        <label for="first_name">Имя *</label>
+                        <input type="text" id="first_name" onfocus="labelUp()">
+                    </div>
+                    <div class="input">
+                        <label for="last_name">Фамилия *</label>
+                        <input type="text" id="last_name">
+                    </div>
+                    <div class="input">
+                        <label for="phone">Телефон *</label>
+                        <input type="phone" id="phone">
+                    </div>
+                    <div class="input">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="input">
+                        <label for="password">Пароль *</label>
+                        <input type="password" id="password">
+                    </div>
+                    <button type="button" class="btn">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -66,6 +95,8 @@
         </div>
     </footer>
 
-<script src="js/script.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -32,6 +32,7 @@
     --text: #000000;
     --el: #fb7516;
     --gray: #757575;
+    --bgh: #f5c011;
 }
 
 body {
@@ -41,6 +42,15 @@ body {
     font-size: 16px;
     background-color: var(--bg);
     color: var(--text);
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gray);
 }
 
 .container {
@@ -102,7 +112,6 @@ header .header nav a.active,
 header .header nav a:hover {
     color: var(--el);
 }
-
 
 footer {
     background-color: var(--text);
@@ -174,4 +183,60 @@ footer .footer .contact svg {
 
 footer .footer .contact svg path {
     fill: var(--el);
+}
+
+main {
+    margin: 95px 0;
+}
+
+main .form {
+    margin-top: 50px;
+}
+
+.form form input {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--gray);
+    padding: 3px 3px 8px 10px;
+    font-size: 18px;
+}
+
+.form form .input {
+    position: relative;
+    margin: 18px 0px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form form .input:nth-of-type(1),
+.form form .input:nth-of-type(2) {
+    width: 48%;
+}
+
+.btn {
+    background-color: var(--el);
+    outline: 0;
+    border: 0;
+    color: var(--bg);
+    width: 100%;
+    font-size: 20px;
+    padding: 15px 20px;
+    margin-top: 18px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--bgh);
+    color: var(--text);
 }
