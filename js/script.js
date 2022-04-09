@@ -41,7 +41,7 @@ button.click(() => {
             inputClick[3].placeholder = 'Не правильно набран E-mail';
             inputClick[i].classList.add("invalid");
         }
-        if (inputClick[2].value.length != 17) {
+        if (inputClick[2].value.length != 17 && inputClick[3].value != '') {
             inputClick[2].value = '';
             inputClick[2].placeholder = 'Не правильно набран номер телефона';
             inputClick[i].classList.add("invalid");
