@@ -78,6 +78,7 @@ header .header {
     justify-content: space-between;
     align-items: center;
     padding: 25px 0;
+    flex-wrap: wrap;
 }
 
 header .header .img {
@@ -107,6 +108,10 @@ header .header nav a {
     line-height: 50px;
     padding: 0 15px;
     transition: all .3s;
+}
+
+header .header nav a:last-of-type {
+    padding-right: 0;
 }
 
 header .header nav a.active,

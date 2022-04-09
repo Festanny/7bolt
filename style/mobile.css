@@ -1,0 +1,178 @@
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 1000px;
+    }
+    footer {
+        font-size: 35px;
+    }
+    footer .footer .contact svg {
+        margin: 0 10px 0 0;
+    }
+    footer .footer .contact, footer .footer .address {
+        width: 47%;
+    }
+    header .header .img {
+        width: 160px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        font-size: 28px;
+    }
+    footer .footer .contact svg {
+        height: 118px;
+        width: 65px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        font-size: 25px;
+    }
+    header .header nav a {
+        padding: 0 10px;
+    }
+    footer .footer .contact .social .img {
+        width: 40px;
+        height: 40px;
+    }
+    .btn {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer .footer .address {
+        width: 100%;
+        order: 1;
+    }
+    footer .footer .contact {
+        width: 100%;
+        order: 2;
+        margin-top: 40px;
+    }
+    footer .footer .address .address-block {
+        width: 100%;
+    }
+    footer .footer {
+        flex-wrap: wrap;
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 538px) {
+    main {
+        margin: 60px 0;
+    }
+    header .header nav {
+        text-align: center;
+        width: 100%;
+        flex: none;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    header .header .logo {
+        width: 100%;
+        flex: none;
+        display: flex;
+        justify-content: center;
+    }
+    header .header {
+        padding: 15px 0;
+    }
+    header .header nav a {
+        line-height: 35px;
+        padding: 0;
+        margin-right: 20px;
+    }
+    header .header nav a:last-of-type {
+        margin-right: 0;
+    }
+    footer {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .header .img {
+        width: 140px;
+        height: 35px;
+    }
+    .form-block .form form label {
+        font-size: 14px;
+    }
+    .form form input {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+    footer {
+        font-size: 18px;
+    }
+    .form form .input {
+        height: 55px;
+    }
+    footer .footer .contact svg {
+        display: none;
+    }
+    footer .footer .contact .info,
+    footer .footer .contact .social {
+        margin-bottom: 40px;
+    }
+    main .form {
+        margin-top: 40px;
+    }
+    header .header nav {
+        flex-wrap: wrap;
+    }
+    header .header nav a {
+        margin: 0 10px;
+    }
+    header .header nav a:last-of-type {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form form .input:nth-of-type(1), .form form .input:nth-of-type(2) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    footer {
+        font-size: 16px;
+    }
+    footer .footer .contact .social .img {
+        width: 35px;
+        height: 35px;
+    }
+    header .header .img {
+        width: 120px;
+        height: 30px;
+    }
+    header .header nav {
+        font-size: 14px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    main .form {
+        margin-top: 30px;
+    }
+    footer .footer {
+        padding: 50px 0;
+    }
+    main {
+        margin: 50px 0;
+    }
+}
