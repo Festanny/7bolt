@@ -33,6 +33,7 @@
     --el: #fb7516;
     --gray: #757575;
     --bgh: #f5c011;
+    --invalid: #ff0000;
 }
 
 body {
@@ -200,6 +201,7 @@ main .form {
     border-bottom: 1px solid var(--gray);
     padding: 3px 3px 8px 10px;
     font-size: 18px;
+    transition: all .3s;
 }
 
 .form form .input {
@@ -239,4 +241,12 @@ main .form {
 .btn:hover {
     background-color: var(--bgh);
     color: var(--text);
+}
+
+.form form input.focus {
+    border-bottom: 1px solid var(--bgh);
+}
+
+.form form input.invalid {
+    border-bottom: 1px solid var(--invalid);
 }

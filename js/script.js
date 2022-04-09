@@ -1,11 +1,29 @@
-let inputForm = $('.form-block .form form .input input');
-let formm = $("form");
+// Label shift
+let inputClick = $('.form-block .form form .input input'),
+    labelFocus = $('.form-block .form form .input label'),
+    button = $('.form-block .form form button');
 
-function labelUp() {
-	$(this).addClass('invalid');
+function inputUp(evt) {
+	inputClick[evt].classList.remove('invalid');
+	inputClick[evt].classList.add("focus");
+}
+function inputDown(evt) {
+	if (inputClick[evt].value == '') {
+        inputClick[evt].classList.add('invalid');
+	}
+    inputClick[evt].classList.remove("focus");
 }
 
-
+button.click(() => {
+    for (var i=0; i<inputClick.length; i++) {
+        if (inputClick[i].value == '') {
+            inputClick[i].classList.add("invalid");
+        }
+        else {
+            inputClick[i].classList.remove("invalid");
+        }
+    }
+});
 
 // mask for phone input
 window.addEventListener("DOMContentLoaded", function() {

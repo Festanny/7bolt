@@ -35,23 +35,23 @@
                 <form action="" method="POST">
                     <div class="input">
                         <label for="first_name">Имя *</label>
-                        <input type="text" id="first_name" onfocus="labelUp()">
+                        <input type="text" id="first_name" onfocus="inputUp(0)" onblur="inputDown(0)">
                     </div>
                     <div class="input">
                         <label for="last_name">Фамилия *</label>
-                        <input type="text" id="last_name">
+                        <input type="text" id="last_name" onfocus="inputUp(1)" onblur="inputDown(1)">
                     </div>
                     <div class="input">
                         <label for="phone">Телефон *</label>
-                        <input type="phone" id="phone">
+                        <input type="phone" id="phone" onfocus="inputUp(2)" onblur="inputDown(2)">
                     </div>
                     <div class="input">
                         <label for="email">E-mail *</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" onfocus="inputUp(3)" onblur="inputDown(3)">
                     </div>
                     <div class="input">
                         <label for="password">Пароль *</label>
-                        <input type="password" id="password">
+                        <input type="password" id="password" onfocus="inputUp(4)" onblur="inputDown(4)">
                     </div>
                     <button type="button" class="btn">Зарегистрироваться</button>
                 </form>
