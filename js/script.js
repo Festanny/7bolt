@@ -3,6 +3,10 @@ let inputClick = $('.form-block .form form .input input'),
     labelFocus = $('.form-block .form form .input label'),
     button = $('.form-block .form form button');
 
+let emailVal = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+let error = '';
+
 function inputUp(evt) {
 	inputClick[evt].classList.remove('invalid');
 	inputClick[evt].classList.add("focus");
@@ -21,6 +25,37 @@ button.click(() => {
         }
         else {
             inputClick[i].classList.remove("invalid");
+        }
+        if ((/^[а-яА-ЯёЁ\s]+$/.test(inputClick[0].value) === false) && inputClick[0].value != '') {
+            inputClick[0].value = '';
+            inputClick[0].placeholder = 'Имя должно быть на русском языке';
+            inputClick[i].classList.add("invalid");
+        }
+        if ((/^[а-яА-ЯёЁ\s]+$/.test(inputClick[1].value) === false) && inputClick[1].value != '') {
+            inputClick[1].value = '';
+            inputClick[1].placeholder = 'Фамилия должна быть на русском языке';
+            inputClick[i].classList.add("invalid");
+        }
+        if ((emailVal.test(inputClick[3].value) === false) && inputClick[3].value != '') {
+            inputClick[3].value = '';
+            inputClick[3].placeholder = 'Не правильно набран E-mail';
+            inputClick[i].classList.add("invalid");
+        }
+        if (inputClick[2].value.length != 17) {
+            inputClick[2].value = '';
+            inputClick[2].placeholder = 'Не правильно набран номер телефона';
+            inputClick[i].classList.add("invalid");
+        }
+    }
+    if (inputClick[0].className != 'invalid') {
+        if (inputClick[1].className != 'invalid') {
+            if (inputClick[2].className != 'invalid') {
+                if (inputClick[3].className != 'invalid') {
+                    if (inputClick[4].className != 'invalid') {
+                        alert('ОК');
+                    }
+                }
+            }
         }
     }
 });
