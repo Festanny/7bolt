@@ -35,13 +35,13 @@
                 <form action="" method="POST">
                     <div class="input">
                         <label for="email">E-mail *</label>
-                        <input type="email" id="email" onfocus="inputUp(3)" onblur="inputDown(3)">
+                        <input type="email" id="email" onfocus="inputUp(0)" onblur="inputDown(0)">
                     </div>
                     <div class="input">
                         <label for="password">Пароль *</label>
-                        <input type="password" id="password" onfocus="inputUp(4)" onblur="inputDown(4)">
+                        <input type="password" id="password" onfocus="inputUp(1)" onblur="inputDown(1)">
                     </div>
-                    <button type="button" class="btn">Авторизоваться</button>
+                    <button type="button" class="btn" id="auth">Авторизоваться</button>
                 </form>
             </div>
         </div>
@@ -86,5 +86,4 @@
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>

@@ -1,7 +1,7 @@
 // Label shift
 let inputClick = $('.form-block .form form .input input'),
-    labelFocus = $('.form-block .form form .input label'),
-    button = $('.form-block .form form button');
+    button = $('.form-block .form form #reg'),
+    buttonAuth = $('.form-block .form form #auth');
 
 let emailVal = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
@@ -56,6 +56,27 @@ button.click(() => {
                     }
                 }
             }
+        }
+    }
+});
+
+buttonAuth.click(() => {
+    for (var i=0; i<inputClick.length; i++) {
+        if (inputClick[i].value == '') {
+            inputClick[i].classList.add("invalid");
+        }
+        else {
+            inputClick[i].classList.remove("invalid");
+        }
+        if ((emailVal.test(inputClick[0].value) === false) && inputClick[0].value != '') {
+            inputClick[0].value = '';
+            inputClick[0].placeholder = 'Не правильно набран E-mail';
+            inputClick[i].classList.add("invalid");
+        }
+    }
+    if (inputClick[0].className != 'invalid') {
+        if (inputClick[1].className != 'invalid') {
+            alert('ОК');
         }
     }
 });
