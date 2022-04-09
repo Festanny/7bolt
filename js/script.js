@@ -22,30 +22,33 @@ button.click(() => {
     for (var i=0; i<inputClick.length; i++) {
         if (inputClick[i].value == '') {
             inputClick[i].classList.add("invalid");
+            if (/^[а-яА-ЯёЁ\s]+$/.test(inputClick[0].value) === false) {
+                inputClick[0].value = '';
+                inputClick[0].placeholder = 'Имя должно быть на русском языке';
+                inputClick[i].classList.add("invalid");
+            }
+            if (/^[а-яА-ЯёЁ\s]+$/.test(inputClick[1].value) === false) {
+                inputClick[1].value = '';
+                inputClick[1].placeholder = 'Фамилия должна быть на русском языке';
+                inputClick[i].classList.add("invalid");
+            }
+            if (emailVal.test(inputClick[3].value) === false) {
+                inputClick[3].value = '';
+                inputClick[3].placeholder = 'Не правильно набран E-mail';
+                inputClick[i].classList.add("invalid");
+            }
+            if (inputClick[3].value == '') {
+                if (inputClick[2].value.length != 17) {
+                    inputClick[2].value = '';
+                    inputClick[2].placeholder = 'Не правильно набран номер телефона';
+                    inputClick[i].classList.add("invalid");
+                }
+            }
         }
         else {
             inputClick[i].classList.remove("invalid");
         }
-        if ((/^[а-яА-ЯёЁ\s]+$/.test(inputClick[0].value) === false) && inputClick[0].value != '') {
-            inputClick[0].value = '';
-            inputClick[0].placeholder = 'Имя должно быть на русском языке';
-            inputClick[i].classList.add("invalid");
-        }
-        if ((/^[а-яА-ЯёЁ\s]+$/.test(inputClick[1].value) === false) && inputClick[1].value != '') {
-            inputClick[1].value = '';
-            inputClick[1].placeholder = 'Фамилия должна быть на русском языке';
-            inputClick[i].classList.add("invalid");
-        }
-        if ((emailVal.test(inputClick[3].value) === false) && inputClick[3].value != '') {
-            inputClick[3].value = '';
-            inputClick[3].placeholder = 'Не правильно набран E-mail';
-            inputClick[i].classList.add("invalid");
-        }
-        if (inputClick[2].value.length != 17 && inputClick[3].value != '') {
-            inputClick[2].value = '';
-            inputClick[2].placeholder = 'Не правильно набран номер телефона';
-            inputClick[i].classList.add("invalid");
-        }
+        
     }
     if (inputClick[0].className != 'invalid') {
         if (inputClick[1].className != 'invalid') {
@@ -64,6 +67,7 @@ buttonAuth.click(() => {
     for (var i=0; i<inputClick.length; i++) {
         if (inputClick[i].value == '') {
             inputClick[i].classList.add("invalid");
+            
         }
         else {
             inputClick[i].classList.remove("invalid");
